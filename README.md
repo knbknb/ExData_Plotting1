@@ -1,7 +1,7 @@
 ## Introduction
 
 This repo contains the source code and results for a homework assignment. 
-Please refer to <a href="https://github.com/rdpeng/ExData_Plotting1">the instructor's repo</a> for details.
+Please refer to <a href="https://github.com/rdpeng/ExData_Plotting1">the instructor's repo</a> and to the file <a href="DataDetails.md">DataDetails.md</a> for details.
 
 
 This uses the "Individual household
