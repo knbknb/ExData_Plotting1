@@ -45,7 +45,7 @@ data <- read_data(datafile.use, colclasses=classes, nRow=nr)
 data$Date <- as.Date(data$Date, format="%d/%m/%Y")
 data$Time <- hms(data$Time)
 data.sample2 <-  data[1:5,]
-data2 <- data[data$Date >= as.Date("2007-02-01") & data$Date <= as.Date("2007-02-01"), ]
+data2 <- data[data$Date >= as.Date("2007-02-01") & data$Date <= as.Date("2007-02-02"), ]
 
 # check that there are no NAs in the dataset
 msg_parse_result(colSums(is.na(data2)), nrow(data2),  length(names(data2))) 
@@ -53,7 +53,6 @@ message(sprintf("Data as read from input files (contains many more rows and  col
 head(data2[,1:5])
 
 #create plots
-hist(data2$Global_active_power, breaks=20, main="Global active power", col="red", xlab="Global active power (kilowatts)")
 
 png(file="plot1.png", width=480, height=480)
 

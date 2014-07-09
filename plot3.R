@@ -65,12 +65,16 @@ head(data2[,1:11])
 
 
 
-png(file="plot2.png", width=480, height=480)
+png(file="plot3.png", width=480, height=480)
 
 
 with (
         data2,
-        plot(dt, Global_active_power, type="l", ylab="Global active power (kilowatts)", xlab="")
+        plot(dt, Global_active_power, type="n", ylab="Energy Sub Metering", xlab="", ylim = c(0, max(Sub_metering_1)))
 )
 
+with(data2,  lines(dt, Sub_metering_1, col="black"))
+with(data2,  lines(dt, Sub_metering_2, col="red"))
+with(data2,  lines(dt, Sub_metering_3, col="blue"))
+legend("topright", col=c("black", "red", "blue"), legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"), lty=1)
 dev.off()
