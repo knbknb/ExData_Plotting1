@@ -13,4 +13,4 @@ are available.
 
 
 
-
+on the x-axes, the plots figures *.png are labeled according to the German language. So instead of being labeled "Thu Fri Sat" they are labeled "Do Fr Sa". This is an R feature. 
